@@ -18,19 +18,22 @@ btn.addEventListener ("click", function(e) {
         alert("Erro: O valor minimo é maior que o máximo")
     }
 
-    if ((isNaN(num1)) || (check1 == false)) {
+    else if ((isNaN(num1)) || (check1 == false)) {
         return1.textContent = `Insira um número inteiro no campo acima.`
     }
 
-    if ((isNaN(num2)) || (check2 == false))  {
+    else if ((isNaN(num2)) || (check2 == false))  {
         return2.textContent = `Insira um número inteiro no campo acima.`
     }
 
-    function getRandomArbitrary(min, max) {
+    else function getRandomArbitrary(min, max) {
         return Math.random() * (max - min) + min;
     }
 
     numx = getRandomArbitrary (num1,num2);
     text.textContent = `O número sorteado foi ${numx.toFixed(2)}`
+    return1.textContent = ``
+    return2.textContent = ``
+    
 })
 
